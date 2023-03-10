@@ -8,5 +8,13 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions"
   ],
-  "framework": "@storybook/html"
-}
+  "framework": "@storybook/html",
+  webpackFinal: async (config, { configType }) => {
+    // Modifiez la configuration de votre webpack ici
+    return config;
+  },
+  // Configuration pour déployer sur GitHub Pages
+  "storybook-static": {
+    "publicPath": "/Design-Systems/"
+  }
+};
